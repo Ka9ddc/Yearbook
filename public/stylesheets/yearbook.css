@@ -1,0 +1,181 @@
+/* Author Ryan Micael */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f5f8ff;
+}
+
+.wrapper {
+  width: 95%;
+  margin: 0 auto;
+}
+
+#search-container {
+  margin: 1em 0;
+  justify-content: center;
+  display: flex;
+}
+
+#search-container input {
+  background-color: transparent;
+  width: 40%;
+  border-bottom: 2px solid #02CCBA;
+  padding: 1em 0.3em;
+}
+
+#search-container input:focus {
+  border-bottom-color: #AA7ECD;
+}
+
+#search-container button {
+  padding: 1em 2em;
+  margin-left: 1em;
+  color: #ffffff;
+  border-radius: 100px;
+  margin-top: 0.5em;
+}
+         
+.btn-grad {
+  background-image: linear-gradient(to right, #02CCBA 0%, #00dbde 15%, #b38ad4  51%, #AA7ECD  100%);
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+
+#buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.button-value {
+  border: 2px solid #6759ff;
+  padding: 1em 2.2em;
+  border-radius: 3em;
+  background-color: transparent;
+  color: #6759ff;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #6759ff;
+  color: #ffffff;
+}
+
+#students {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 1.5em;
+  padding: 2em 0;
+}
+
+.card {
+  background-color: #ffffff;
+  max-width: 18em;
+  margin-top: 1em;
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 1em 2em 2.5em rgba(1, 2, 68, 0.08);
+}
+
+.image-container {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
+  height: 15em;
+}
+
+.container {
+  padding-top: 1em;
+  color: #110f29;
+}
+
+.container h5 {
+  font-weight: 500;
+}
+
+.hide {
+  display: none;
+}
+
+
+/*========= WELCOME INTROCUTION ==========*/
+
+.intro {
+  height: 60vh;
+  width: 100%;
+  background: linear-gradient(275deg, #AA7ECD 0%, #02CCBA 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+
+.intro h1 {
+  font-weight: 300;
+  line-height: 0.8;
+}
+
+.intro h3 {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  line-height: 1;
+}
+
+/*======================= END INTRODUCTION SECTION ==================*/
+
+
+
+/*======================= MEDIA QUERIES ==================*/
+
+@media screen and (max-width: 720px) {
+  img {
+    max-width: 100%;
+    object-fit: contain;
+    height: 100%;
+  }
+
+  .card {
+    max-width: 100%;
+    margin-top: 1em;
+  }
+
+  #students {
+    grid-template-columns: auto;
+    grid-column-gap: 1em;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 768px) {
+
+  #students {
+    grid-template-columns: auto auto;
+    grid-column-gap: 1em;
+  }
+}
